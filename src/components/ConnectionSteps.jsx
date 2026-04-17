@@ -52,7 +52,7 @@ function ConnectionSteps({
           placeholder="Enter topic"
           className={`${fieldClass} mt-3`}
         />
-        <button onClick={onSubscribe} disabled={!canSubscribe} type="button" className={`${primaryBtnClass} mt-3`}>
+        <button onClick={onSubscribe} disabled={isSubscribed} type="button" className={`${primaryBtnClass} mt-3 ${isSubscribed ? "cursor-not-allowed pointer-none:" : ""}`}>
           Subscribe
         </button>
         <p className="mt-2 text-sm text-slate-700">
